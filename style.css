@@ -179,6 +179,8 @@ background-color: #274472;
 color: #C3E0E5;
 margin: 0px; 
 text-align: center;
+display: flex;
+justify-content: center;
 } 
 
 h1 > img {
@@ -193,13 +195,14 @@ h1 > img {
 
 .section {
   display: flex;
+  flex-direction: column;
   gap: 2rem;
   margin: 16px;
 }
 
-@media only screen and (max-width: 767px) {
-  .section {
-    flex-direction: column;
+@media only screen and (min-width: 767px) {
+  .s1 {
+    flex-direction: row;
   }
 }
 
@@ -212,7 +215,54 @@ h1 > img {
   font-family: bd-geminis, sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 64px;
+  font-size: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.s2, .s3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.s2 > button:not(.back),
+.s3 > button:not(.back),
+.sub-section > button {
+  width: 50%;
+  border: 2px solid #c9c7c7;
+  border-radius: 12px;
+  color: white;
+  background: #1a1d21;
+  font-size: 20px;
+  padding: 1rem;
+  text-align: left;
+}
+
+.s2 > button:hover:not(.back),
+.s3 > button:hover:not(.back),
+.sub-section > button:hover {
+  background: #292d33;
+}
+
+@media only screen and (max-width: 767px) {
+  .s2 > button:not(.back),
+  .s3 > button:not(.back),
+  .sub-section > button {
+    width: 100%;
+  }
+}
+
+.sub-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+  box-sizing: border-box;
 }
 
 .btn-serie {
@@ -227,4 +277,26 @@ h1 > img {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.back {
+  background: #1a1d21;
+  color: #ccc;
+  border: none;
+  border-radius: 12px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 50%;
+}
+
+.back:hover {
+  background: #292d33;
+  box-shadow: 0 0 0 5px #292d33;
+}
+
+@media only screen and (max-width: 767px) {
+  .back {
+    width: 100%;
+  }
 }

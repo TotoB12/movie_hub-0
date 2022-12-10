@@ -13,18 +13,12 @@
 <body>
 
 <nav>
-  <li><img class="img" src="assets/logo.png" alt="Logo" height="44"></li>
-  <li><a class="icon active" href="https://totob12.github.io/index.html"><span class="material-symbols-outlined">home</span></a></li>
-  <li class="screen"><a class="icon" href="https://TotoB12-Chat.totob12.repl.co/"><span class="material-symbols-outlined">forum</span><p class=cc>Social</p></a></li>
-  <li class="screen"><a class="icon" href="https://totob12.github.io/things/inpainting-forward.html"><span class="material-symbols-outlined">format_paint</span><p class="cc">Paint</p></a></li>
-  <li class="screen"><a class="icon" href="https://totob12.github.io/things/radio.html"><span class="material-symbols-outlined">radio</span><p class="cc">Radio</p></a></li>
-  <li class="screen"><a class="icon" href="https://totob12.github.io/things/games.html"><span class="material-symbols-outlined">sports_esports</span><p class="cc">Games</p></a></li>
-  <li class="screen"><a class="icon" href="https://totob12.github.io/things/sites.html"><span class="material-symbols-outlined">handyman</span><p class="cc">Random</p></a></li>
-  <li class="screen"><a class="icon right" href="https://totob12.github.io/things/feedback.html"><span class="material-symbols-outlined">alternate_email</span></a></li>
-  <li class="screen"><a class="icon right" href="https://totob12.github.io/things/countdown.html"><span class="material-symbols-outlined">hourglass_empty</span></a></li>
-  <div class="dropdown" style="float:right;">
-  <button class="dropbtn"><span class="material-symbols-outlined">menu</span></button>   
-    <div class="dropdown-content">
+  
+<div class="nav-section ns1" id="ns1">
+    <div class="dropdown">   
+    <button class="dropbtn"><span class="material-symbols-outlined">menu</span></button>
+  <div class="dropdown-content">
+    <a class="blanka" href=""></a>
     <a href="https://totob12.github.io/index.html"><span class="material-symbols-outlined">home</span><div class="dropdowncc">Home</div></a>
     <a class="blanka" href=""></a>
     <a href="https://TotoB12-Chat.totob12.repl.co/"><span class="material-symbols-outlined">forum</span><div class="dropdowncc">Social</div></a>
@@ -37,19 +31,37 @@
     <a href="https://totob12.github.io/things/feedback.html"><span class="material-symbols-outlined">alternate_email</span><div class="dropdowncc">Contact</div></a>
   </div>
 </div>
+  </div>
+  
+<div class="nav-section ns2" id="ns2">
+<a class="home active" href="https://totob12.github.io/index.html"><span class="material-symbols-outlined">home</span></a>
+<a href="https://TotoB12-Chat.totob12.repl.co/"><span class="material-symbols-outlined">forum</span>Social</a>
+<a href="https://totob12.github.io/things/inpainting-forward.html"><span class="material-symbols-outlined">format_paint</span>Paint</a>
+<a href="https://totob12.github.io/things/radio.html"><span class="material-symbols-outlined">radio</span>Radio</a>
+<a href="https://totob12.github.io/things/games.html"><span class="material-symbols-outlined">sports_esports</span>Games</a>
+<a href="https://totob12.github.io/things/sites.html"><span class="material-symbols-outlined">handyman</span>Random</a>
+  </div>
+
+<div class="nav-section ns3" id="ns3">
+  <a href="https://totob12.github.io/things/feedback.html"><span class="material-symbols-outlined">alternate_email</span></a></li>
+  <a href="https://totob12.github.io/things/countdown.html"><span class="material-symbols-outlined">hourglass_empty</span></a></li>
+<img class="img" src="assets/logo.png" alt="Logo" height="44px">
+</div>
+
 </nav>
 
-  <h1 id="header">
+  
+<h1 id="header">
   <img src="/assets/titleimg.png">
   </h1>
 
-  <div class="section s1">
+  
+<div class="section s1">
   <button class="btn-serie" id="btn-1.1">SERIE</button>
   <button class="btn-film" id="btn-1.2">FILM</button>
   </div>
 
-  
-  <div class="section s2" id="s-serie">
+<div class="section s2" id="s-serie">
 
   <button class="back" id="btn-back-s"><span class="material-symbols-outlined">arrow_back_ios</span>Back to menu</button>
     
@@ -78,8 +90,7 @@
     </div>
   </div>
 
-  
-  <div class="section s3" id="s-film">
+<div class="section s3" id="s-film">
     
   <button class="back" id="btn-back-f"><span class="material-symbols-outlined">arrow_back_ios</span>Back to menu</button>
     
@@ -87,9 +98,48 @@
   <button>FILM 2</button>
   <button>FILM 3</button>
   </div>
+
+  
+<div class="request" id="request">
+  <h2>FILM/SERIE REQUEST</h2>
+    <p>Would you like to see a film or serie here ? 
+    <br>Please use this request form to send us a message.</p>
+
+  
+  <form class="gform pure-form pure-form-stacked" method="POST" data-email="example@email.net"
+  action="https://script.google.com/macros/s/AKfycbwjsySui5AcsV36qeBl-FeIAMjvcelHHZoL0BoDmryoIMrHsZjtEjMyNYasywUXfM8LWA/exec">
+
+      <p for="name">Name</p>
+      <fieldset class="form-section name">
+        <label for="name"><span class="material-symbols-outlined">person</span></label>
+        <input id="name" name="name" placeholder="What your mom calls you" />        
+      </fieldset>
+
+      <p for="request">What you would like to see</p>
+      <fieldset class="form-section film">
+        <label for="request"><span class="material-symbols-outlined">movie_edit</span></label>
+        <input id="request" name="request" placeholder="Film / serie..."></input>        
+      </fieldset>
+
+      <p for="email">Your Email Address</p>
+      <fieldset class="form-section email">
+        <label for="email"><span class="material-symbols-outlined">mail</span></label>
+        <input id="email" name="email" type="email" value="" required placeholder="your.name@email.com"/>        
+      </fieldset>
+
+      <button class="send"><span class="material-symbols-outlined">send</span>SEND REQUEST</button>
+
+  <div class="thankyou_message" style="display:none;"><h2>Thanks for the request !</h2><br><a href="javascript:window.location.href=window.location.href">Send another request</a></div>
+</form>
+<script data-cfasync="false" src="https://moviehub.totob12.repl.co/form-submission-handler.js"></script>
+</div>
+
+  
 </body>
   
-  <script>
+<script>
+    var request = document.getElementById('request');
+    
     var header = document.getElementById('header');
     var series = document.getElementById('s-serie');
     var serie1 = document.getElementById('s-serie1');
@@ -128,6 +178,7 @@
       btnseries.style.display = 'none';
       btnfilms.style.display = 'none';
       header.style.display = 'none';
+      request.style.display = 'none';
     });
 
     btnbackserie.addEventListener('click', function(e) {
@@ -135,6 +186,7 @@
       btnseries.style.display = 'flex';
       btnfilms.style.display = 'flex';
       header.style.display = 'flex';
+      request.style.display = 'flex';
     });
 
     btnfilms.addEventListener('click', function(e) {
@@ -143,6 +195,7 @@
       btnseries.style.display = 'none';
       btnfilms.style.display = 'none';
       header.style.display = 'none';
+      request.style.display = 'none';
     });
 
     btnbackfilm.addEventListener('click', function(e) {
@@ -150,6 +203,7 @@
       btnseries.style.display = 'flex';
       btnfilms.style.display = 'flex';
       header.style.display = 'flex';
+      request.style.display = 'flex';
     });
 
     btnserie1.addEventListener('click', function(e) {
@@ -230,4 +284,5 @@
       btnserie3.style.fontSize = '20px';
     });
   </script>
+  
 </html>

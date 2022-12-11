@@ -5,6 +5,7 @@
   --navlightbg: #5885AF;
   --lighttext: #C3E0E5;
   --orange: #FFA500;
+  --lightbg: #292d33;
 }
 
 * {
@@ -210,9 +211,11 @@ h1 > img {
   }
 }
 
-.s1 > button {
+.s1 > button,
+.btn-request {
   width: 100%;
-  height: 200px;
+  --height: 200px;
+  height: var(--height);
   border: 2px solid var(--navtxt);
   border-radius: 12px;
   color: white;
@@ -225,7 +228,14 @@ h1 > img {
   align-items: center;
 }
 
-.s2, .s3 {
+.s1 > button:hover,
+.btn-request:hover {
+  border: 2px solid var(--orange);
+  color: var(--orange);
+  transition-duration: 0.5s;
+}
+
+.s2, .s3, .sr {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -283,6 +293,23 @@ h1 > img {
   background-size: cover;
 }
 
+.btn-request {
+  box-sizing: border-box;
+  height: 100px;
+  width: 50%;
+  font-size: 32px;
+  background-image: url("assets/request.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media only screen and (max-width: 767px) {
+  .btn-request {
+    width: 100%;
+  }
+}
+
 .back {
   background: var(--bg);
   color: var(--navtxt);
@@ -295,8 +322,8 @@ h1 > img {
 }
 
 .back:hover {
-  background: #292d33;
-  box-shadow: 0 0 0 5px #292d33;
+  background: var(--lightbg);
+  box-shadow: 0 0 0 5px var(--lightbg);
 }
 
 @media only screen and (max-width: 767px) {
@@ -369,4 +396,55 @@ form > p {
 .thankyou_message > a {
   color: var(--navtxt);
   margin-top: -8px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+  justify-content: center;
+  padding: 16px;
+}
+
+hr {
+  width: 100%;
+  background: var(--navtxt);
+  border: 1px solid var(--navtxt);
+}
+
+.credits {
+  color: var(--navtxt);
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.credits > p {
+  width: 50%;
+  font-size: 11px;
+  line-height: 24px;
+}
+
+.credits > p > a {
+  color: var(--navtxt);
+}
+
+.righttxt {
+  text-align: right;
+}
+
+@media only screen and (max-width: 767px) {
+  .credits {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .righttxt {
+    text-align: left;
+  }
+  .footer {
+    margin-top: 100px;
+  }
+  .credits > p {
+    width: 100%;
+  }
 }

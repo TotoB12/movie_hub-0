@@ -59,7 +59,11 @@
 <div class="section s1">
   <button class="btn-serie" id="btn-1.1">SERIE</button>
   <button class="btn-film" id="btn-1.2">FILM</button>
-  </div>
+</div>
+
+<div class="section sr">
+  <button class="btn-request" id="btn-1.3">MAKE A REQUEST</button>
+</div>
 
 <div class="section s2" id="s-serie">
 
@@ -101,6 +105,7 @@
 
   
 <div class="request" id="request">
+  <button class="back" id="btn-back-r"><span class="material-symbols-outlined">arrow_back_ios</span>Go back</button>
   <h2>FILM/SERIE REQUEST</h2>
     <p>Would you like to see a film or serie here ? 
     <br>Please use this request form to send us a message.</p>
@@ -129,11 +134,22 @@
 
       <button class="send"><span class="material-symbols-outlined">send</span>SEND REQUEST</button>
 
-  <div class="thankyou_message" style="display:none;"><h2>Thanks for the request !</h2><br><a href="javascript:window.location.href=window.location.href">Send another request</a></div>
+  <div class="thankyou_message" style="display:none;"><h2>Thanks for the request !</h2></div>
 </form>
 <script data-cfasync="false" src="https://moviehub.totob12.repl.co/form-submission-handler.js"></script>
 </div>
 
+  <footer>
+    <hr>
+    <div class="credits">
+    <p>Frontend : @txoriurdina<br>
+    Backend : @TotoB12<br>
+    Illustration : @melatonin</p>
+    <p class="righttxt">Contact at <a href="mailto:totob12github@gmail.com" target="_self">totob12github@gmail.com</a><br>
+    © Copyright All rights reserved<br>
+    Hosted by Github and Replit</p>
+    </div>
+  </footer>
   
 </body>
   
@@ -156,6 +172,9 @@
     var btnbackserie1 = document.getElementById('btn-back-s1');
     var btnbackserie2 = document.getElementById('btn-back-s2');
     var btnbackserie3 = document.getElementById('btn-back-s3');
+    var btnrequest = document.getElementById('btn-1.3');
+    var request = document.getElementById('request');
+    var btnbackrequest = document.getElementById('btn-back-r');
     
     series.style.display = 'none';
     serie1.style.display = 'none';
@@ -168,6 +187,25 @@
     btnserie1.style.border = '2px solid #ccc';
     btnserie2.style.border = '2px solid #ccc';
     btnserie3.style.border = '2px solid #ccc';
+    request.style.display = 'none';
+
+    btnrequest.addEventListener('click', function(e) {
+      request.style.display = 'flex';
+      btnrequest.style.display = 'none';
+      series.style.display = 'none';
+      films.style.display = 'none';
+      btnseries.style.display = 'none';
+      btnfilms.style.display = 'none';
+      header.style.display = 'none';
+    });
+
+    btnbackrequest.addEventListener('click', function(e) {
+      request.style.display = 'none';
+      btnrequest.style.display = 'flex';
+      btnseries.style.display = 'flex';
+      btnfilms.style.display = 'flex';
+      header.style.display = 'flex';
+    });
 
     btnseries.addEventListener('click', function(e) {
       series.style.display = 'flex';
@@ -178,7 +216,6 @@
       btnseries.style.display = 'none';
       btnfilms.style.display = 'none';
       header.style.display = 'none';
-      request.style.display = 'none';
     });
 
     btnbackserie.addEventListener('click', function(e) {
@@ -186,7 +223,6 @@
       btnseries.style.display = 'flex';
       btnfilms.style.display = 'flex';
       header.style.display = 'flex';
-      request.style.display = 'flex';
     });
 
     btnfilms.addEventListener('click', function(e) {
@@ -195,7 +231,6 @@
       btnseries.style.display = 'none';
       btnfilms.style.display = 'none';
       header.style.display = 'none';
-      request.style.display = 'none';
     });
 
     btnbackfilm.addEventListener('click', function(e) {
@@ -203,7 +238,6 @@
       btnseries.style.display = 'flex';
       btnfilms.style.display = 'flex';
       header.style.display = 'flex';
-      request.style.display = 'flex';
     });
 
     btnserie1.addEventListener('click', function(e) {

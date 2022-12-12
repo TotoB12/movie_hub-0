@@ -6,6 +6,8 @@
   --lighttext: #C3E0E5;
   --orange: #FFA500;
   --lightbg: #292d33;
+  --red: red;
+  --green: green;
 }
 
 * {
@@ -140,13 +142,12 @@
   display: none;
   position: absolute;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   background-color: var(--navlightbg);
   width: 300px; 
   border-radius: 15px;
-  top: 44px;
   box-shadow: 10px 10px 20px 0px rgb(0 0 0 / 0.3);
-  padding-bottom: 22px;
+  height: 100vh;
 }
 
 .dropdown-content a {
@@ -255,10 +256,42 @@ h1 > img {
   text-align: left;
 }
 
+.s3 > button:not(.back) {
+  display: flex;
+  align-items: center;
+}
+
+.s3 > .sub-section {
+  background: var(--lightbg);
+  border-radius: 12px;
+  width: 50%;
+}
+
+.s3 > .sub-section > button:not(.back) {
+  width: 100%;
+  border: none;
+  background: var(--lightbg);
+}
+
+@media only screen and (max-width: 767px) {
+  .s3 > .sub-section {
+    width: 100%;
+  }
+}
+
+.s2 > button:not(.back) > span,
+.s3 > button:not(.back) > span {
+  margin-left: auto;
+}
+
 .s2 > button:hover:not(.back),
 .s3 > button:hover:not(.back),
 .sub-section > button:hover {
-  background: #292d33;
+  background: var(--lightbg);
+}
+
+.s3 > .sub-section > button:hover:not(.back) {
+  background: var(--bg);
 }
 
 @media only screen and (max-width: 767px) {
@@ -267,6 +300,49 @@ h1 > img {
   .sub-section > button {
     width: 100%;
   }
+}
+
+.s0,
+.s0new {
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.s0 > div,
+.s0new > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.s0 > div > span {
+  color: var(--red);
+  font-size: 72px;
+  margin-right: 8px;
+}
+
+.s0 > div > h3 {
+  color: var(--red);
+  font-size: 32px;
+}
+
+.s0new > div > span {
+  color: var(--green);
+  font-size: 72px;
+  margin-right: 8px;
+}
+
+.s0new > div > h3 {
+  color: var(--green);
+  font-size: 32px;
+}
+
+.s0 > p,
+.s0new > p {
+  color: var(--navtxt);
+  margin: 0;
 }
 
 .sub-section {

@@ -7,7 +7,7 @@
   --orange: #FFA500;
   --lightbg: #292d33;
   --red: red;
-  --green: green;
+  --green: #009900;
 }
 
 * {
@@ -244,8 +244,7 @@ h1 > img {
 }
 
 .s2 > button:not(.back),
-.s3 > button:not(.back),
-.sub-section > button {
+.s3 > button:not(.back, .alphabet) {
   width: 50%;
   border: 2px solid var(--navtxt);
   border-radius: 12px;
@@ -261,46 +260,121 @@ h1 > img {
   align-items: center;
 }
 
-.s3 > .sub-section {
-  background: var(--lightbg);
-  border-radius: 12px;
-  width: 50%;
-}
-
-.s3 > .sub-section > button:not(.back) {
-  width: 100%;
-  border: none;
-  background: var(--lightbg);
-}
-
-@media only screen and (max-width: 767px) {
-  .s3 > .sub-section {
-    width: 100%;
-  }
-}
-
 .s2 > button:not(.back) > span,
 .s3 > button:not(.back) > span {
   margin-left: auto;
 }
 
-.s2 > button:hover:not(.back),
-.s3 > button:hover:not(.back),
-.sub-section > button:hover {
+.s2 > button:hover:not(.back, .alphabet),
+.s3 > button:hover:not(.back, .alphabet) {
   background: var(--lightbg);
-}
-
-.s3 > .sub-section > button:hover:not(.back) {
-  background: var(--bg);
 }
 
 @media only screen and (max-width: 767px) {
   .s2 > button:not(.back),
-  .s3 > button:not(.back),
-  .sub-section > button {
+  .s3 > button:not(.back) {
     width: 100%;
   }
 }
+
+/*start*/
+.film-section {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.btn-film-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.film-section > .btn-film-section > button {
+  width: 100%;
+  border: 2px solid var(--navtxt);
+  border-radius: 12px;
+  color: white;
+  background: var(--bg);
+  font-size: 20px;
+  padding: 1rem;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.film-section > .btn-film-section > button > span {
+  margin-left: auto;
+}
+
+.film-section > .btn-film-section > .sub-film-section {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  background: var(--lightbg);
+  width: 100%;
+  border-radius: 12px;
+  margin-top: 2rem;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+
+.film-section > .btn-film-section > .sub-film-section > button {
+  width: 100%;
+  border: none;
+  background: var(--lightbg);
+  border-radius: 12px;
+  color: white;
+  font-size: 20px;
+  padding: 1rem;
+  text-align: left;
+}
+
+.film-section > .btn-film-section > .sub-film-section > button:hover {
+  background: var(--bg);
+}
+
+.film-section > .btn-film-section > button:hover {
+  background: var(--lightbg);
+}
+
+.film-section:hover .sub-film-section {
+  display: flex;
+}
+
+.film-section:hover .btn-film-s {
+  background: var(--lightbg);
+  border: 2px solid var(--orange);
+  transition-duration: 0.5s;
+}
+
+.film-section:hover .btn-film-s > span {
+  transform: rotate(90deg);
+  transition-duration: 0.5s;
+}
+
+@media only screen and (max-width: 767px) {
+  .film-section {
+    width: 100%;
+  }
+}
+
+.alphabet {
+  border: none;
+  font-size: 32px;
+  width: 50%;
+  border-radius: 12px;
+  color: #ccc;
+  background: var(--bg);
+  padding: 1rem;
+  justify-content: center;
+}
+
+/*end*/
 
 .s0,
 .s0new {
@@ -523,4 +597,29 @@ hr {
   .credits > p {
     width: 100%;
   }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  border: none;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--lightbg); 
+  border: none;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--navbg); 
+  border-radius: 6px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--navlightbg); 
+  cursor: move;
 }

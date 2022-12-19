@@ -116,7 +116,7 @@
 
 <button class="back" id="btn-back-f"><span class="material-symbols-outlined">arrow_back_ios</span>Back</button>
 
-<button class="alphabet">A</button>
+<button id="a" class="alphabet">A</button>
   
 <!--A Dog's Purpose (2017)-->
 <button onclick="window.location.href='movies/a-dog-purpose.html';">A Dog's Purpose (2017)</button>
@@ -187,7 +187,6 @@
 <!--Avatar (2009)-->
 <button onclick="window.location.href='movies/avatar.html';">Avatar (2009)</button>
 
-
 <!--Avengers (2012 - 2019)-->
 <div class="film-section">
   <div class="btn-film-section">
@@ -201,7 +200,8 @@
   </div>
 </div>
 
-<button class="alphabet">B</button>
+  
+<button id="b" class="alphabet">B</button>
   
 <!--Back to the Future (1985 - 1990)-->  
 <div class="film-section">
@@ -230,7 +230,8 @@
 <!--Black Widow (2021)-->
 <button onclick="window.location.href='movies/blackw.html';">Black Widow (2021)</button> 
 
-<button class="alphabet">C</button>
+  
+<button id="c" class="alphabet">C</button>
   
 <!--Captain Marvel (2019)-->
 <button onclick="window.location.href='movies/captain.html';">Captain Marvel (2019)</button> 
@@ -292,7 +293,8 @@
 <!--Cyrano (2021)-->
 <button onclick="window.location.href='movies/cyrano.html';">Cyrano (2021)</button>
 
-<button class="alphabet">D</button>
+  
+<button id="d" class="alphabet">D</button>
 
 <!--Deadpool (2016 - 2018)-->
 <div class="film-section">
@@ -357,7 +359,7 @@
 <!--Dumbo (2019)-->
 <button onclick="window.location.href='movies/dumbo.html';">Dumbo (2019)</button>
 
-<button class="alphabet">E</button>
+<button id="e" class="alphabet">E</button>
 
 <!--Encanto (2021)-->
 <button onclick="window.location.href='movies/enc.html';">Encanto (2021)</button>
@@ -372,12 +374,12 @@
   </div>
 </div>
 
-<button class="alphabet">F</button>
+<button id="f" class="alphabet">F</button>
 
 <!--Free Guy (2021)-->
 <button onclick="window.location.href='movies/free.html';">Free Guy (2021)</button>
 
-<button class="alphabet">G</button>
+<button id="g" class="alphabet">G</button>
 
 <!--Garfield (2004)-->
 <button onclick="window.location.href='movies/gar.html';">Garfield (2004)</button>
@@ -415,7 +417,8 @@
   </div>
 </div>
 
-<button class="alphabet">H</button>
+  
+<button id="h" class="alphabet">H</button>
 
 <!--Hamilton (2020)-->
 <button onclick="window.location.href='movies/ham.html';">Hamilton (2020)</button>
@@ -478,6 +481,14 @@
 <script data-cfasync="false" src="https://moviehub.totob12.repl.co/form-submission-handler.js"></script>
 </div>
 
+<div class="theme">
+  <p>THEME</p>
+  <div class="theme-changer">
+    <button id="light" class="theme-light" onclick="lighttheme()"><span class="material-symbols-outlined">light_mode</span></button>
+    <button id="dark" class="theme-dark" onclick="darktheme()"><span class="material-symbols-outlined">dark_mode</span></button>
+  </div>
+</div>
+  
 <footer>
     <hr>
     <div class="credits">
@@ -493,6 +504,50 @@
 </body>
   
 <script>
+
+// Get the root element
+var r = document.querySelector(':root');
+var btnthemelight = document.getElementById('light');
+var btnthemedark = document.getElementById('dark');
+
+btnthemelight.style.border = '2px solid #f0f0f0';
+btnthemelight.style.color = 'black';
+btnthemedark.style.border = '2px solid #5885AF';
+btnthemedark.style.color = '#5885AF';
+
+// Create a function for setting a variable value
+function lighttheme() {
+  r.style.setProperty('--bg', '#f0f0f0');
+  r.style.setProperty('--text', '#404040');
+  r.style.setProperty('--lightbg', '#d9d9d9');
+  r.style.setProperty('--textfooter', '#5e5d5d');
+  r.style.setProperty('--themeFontColor', 'black');
+  btnthemelight.style.border = '2px solid #FFA500';
+  btnthemelight.style.color = '#FFA500';
+  btnthemedark.style.border = '2px solid black';
+  btnthemedark.style.color = '#f0f0f0';
+}
+
+function darktheme() {
+  r.style.setProperty('--bg', '#1a1d21');
+  r.style.setProperty('--text', '#c9c7c7');
+  r.style.setProperty('--lightbg', '#292d33');
+  r.style.setProperty('--textfooter', '#c9c7c7');
+  r.style.setProperty('--themeFontColor', 'white');
+  btnthemelight.style.border = '2px solid #f0f0f0';
+  btnthemelight.style.color = 'black';
+  btnthemedark.style.border = '2px solid #5885AF';
+  btnthemedark.style.color = '#5885AF';
+}
+
+  
+document.addEventListener('keydown', e => {
+  if (e.repeat) return
+  const index = e.key
+  document.getElementById(index).scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"});
+})
+
+  
     var request = document.getElementById('request');
     
     var header = document.getElementById('header');

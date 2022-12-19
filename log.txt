@@ -1,5 +1,5 @@
 This file is for discussion and information... and log.
 
-12/12/2022 12:20 - Txori
-The CSS work fine, it will way faster to add movie sections. No more JS is required. Only problem, sometimes it acts weird.
-Also, it's not done but I made a custom scrollbar
+[TXORI] 18/12/2022
+- Light Theme / Dark Theme
+- Scroll to letter pressed

@@ -39,6 +39,10 @@
     color: white;
   }
 
+
+/* ---------------- NAVBAR ---------------- */
+
+
  nav {
   background: var(--navbg);
   color: var(--navtxt);
@@ -184,6 +188,10 @@
   background-color: var(--navlightbg);
 }
 
+
+/* ---------------- HEADER ---------------- */
+
+
 h1 {
   background-color: #274472;
   color: #C3E0E5;
@@ -203,6 +211,10 @@ h1 > img {
     width: 100%;
   }
 }
+
+
+/* ---------------- MENU / NAVIGATION ---------------- */
+
 
 .section {
   display: flex;
@@ -282,7 +294,10 @@ h1 > img {
   }
 }
 
-/*start*/
+
+/* ---------------- FILM SECTION ---------------- */
+
+
 .film-section {
   display: flex;
   flex-direction: column;
@@ -296,7 +311,8 @@ h1 > img {
   justify-content: center;
 }
 
-.film-section > .btn-film-section > button {
+.film-section > .btn-film-section > button,
+.sub-section > button {
   width: 100%;
   border: 2px solid var(--navtxt);
   border-radius: 12px;
@@ -308,6 +324,11 @@ h1 > img {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* serie buttons */
+.sub-section > button {
+  width: 50%;
 }
 
 .film-section > .btn-film-section > button > span {
@@ -343,7 +364,8 @@ h1 > img {
   background: var(--bg);
 }
 
-.film-section > .btn-film-section > button:hover {
+.film-section > .btn-film-section > button:hover,
+.sub-section > button {
   background: var(--lightbg);
 }
 
@@ -363,7 +385,8 @@ h1 > img {
 }
 
 @media only screen and (max-width: 767px) {
-  .film-section {
+  .film-section,
+  .sub-section > button {
     width: 100%;
   }
 }
@@ -379,7 +402,9 @@ h1 > img {
   justify-content: center;
 }
 
-/*end*/
+
+/* ---------------- NEWS ---------------- */
+
 
 .s0,
 .s0new {
@@ -423,6 +448,10 @@ h1 > img {
   color: var(--text);
   margin: 0;
 }
+
+
+/* ---------------- MENU ---------------- */
+
 
 .sub-section {
   width: 100%;
@@ -486,6 +515,10 @@ h1 > img {
     width: 100%;
   }
 }
+
+
+/* ---------------- REQUEST ---------------- */
+
 
 .request {
   display: flex;
@@ -556,6 +589,9 @@ form > p {
 }
 
 
+/* ---------------- THEME ---------------- */
+
+
 .theme {
   display: flex;
   flex-direction: column;
@@ -597,6 +633,10 @@ form > p {
   background: #f0f0f0;
   border-radius: 12px 0 0 12px;
 }
+
+
+/* ---------------- FOOTER ---------------- */
+
 
 footer {
   display: flex;
@@ -674,6 +714,10 @@ hr {
     display: none;
   }
 }
+
+
+/* ---------------- SCROLLBAR ---------------- */
+
 
 /* width */
 ::-webkit-scrollbar {
